@@ -3,15 +3,15 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="hl7.fhir.us.davinci-pdex-NatlDir"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>ONCFASTNationalHealthcareDirectory</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/national-healthcare-directory/ImplementationGuide/hl7.fhir.us.davinci-pdex-NatlDir</pre><div><p>National Healthcare Directory</p>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>ONCFASTNationalCareCoordinationDirectory</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/national-healthcare-directory/ImplementationGuide/hl7.fhir.us.davinci-pdex-NatlDir</pre><div><p>National Care Coordination Directory</p>
 </div></div>
   </text>
   <url value="http://hl7.org/fhir/us/national-healthcare-directory/ImplementationGuide/hl7.fhir.us.davinci-pdex-NatlDir"/>
   <version value="1.0.0"/>
-  <name value="ONCFASTNationalHealthcareDirectory"/>
-  <title value="National Healthcare Directory"/>
+  <name value="ONCFASTNationalCareCoordinationDirectory"/>
+  <title value="National Care Coordination Directory"/>
   <status value="active"/>
-  <date value="2021-10-21T11:12:19-04:00"/>
+  <date value="2021-10-29T10:58:57-04:00"/>
   <publisher value="HL7 Patient Administration Working Group"/>
   <contact>
     <name value="HL7 Patient Administration Working Group"/>
@@ -24,7 +24,7 @@
       <value value="pafm@lists.HL7.org"/>
     </telecom>
   </contact>
-  <description value="National Healthcare Directory"/>
+  <description value="National Care Coordination Directory"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -207,8 +207,8 @@
       <reference>
         <reference value="StructureDefinition/NatlDir-CareTeam"/>
       </reference>
-      <name value="National Directory Exchange Care Team"/>
-      <description value="This profile sets minimum expectations for searching for and fetching information associated with a care team. It identifies which core elements, extensions, vocabularies and value sets SHALL be present in the CareTeam resource when using this profile."/>
+      <name value="National Directory Care Team"/>
+      <description value="Defines the basic constraints and extensions on the CareTeam resource for use in a Validated Healthcare Directory"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -317,8 +317,8 @@
       <reference>
         <reference value="StructureDefinition/NatlDir-Restriction"/>
       </reference>
-      <name value="National Directory Restriction"/>
-      <description value="This profile sets minimum expectations for searching for and fetching information associated with a restriction. It identifies which core elements, extensions, vocabularies and value sets SHALL be present in the Consent resource when using this profile."/>
+      <name value="NatlDir Restriction"/>
+      <description value="Restriction on use/release of exchanged information"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -328,8 +328,8 @@
       <reference>
         <reference value="StructureDefinition/NatlDir-Validation"/>
       </reference>
-      <name value="National Directory Validation"/>
-      <description value="This profile sets minimum expectations for searching for and fetching information associated with validation. It identifies which core elements, extensions, vocabularies and value sets SHALL be present in the VerificationResult resource when using this profile."/>
+      <name value="NatlDir Validation"/>
+      <description value="Describes validation requirements, source(s), status and dates for one or more elements"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -341,6 +341,17 @@
       </reference>
       <name value="Accessibility"/>
       <description value="An extension to describe accessibility options offered by a practitioner or at a location."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/careteam-alias"/>
+      </reference>
+      <name value="NatlDir Careteam Alias"/>
+      <description value="Alternate names by which the team is known"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -370,6 +381,17 @@
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/contactpoint-viaintermediary"/>
+      </reference>
+      <name value="NatlDir Contactpoint Viaintermediary"/>
+      <description value="Represents an external point of contact responsible for handling communications with this entity"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/delivery-method"/>
       </reference>
       <name value="Delivery Method"/>
@@ -381,10 +403,43 @@
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/endpoint-reference"/>
+      </reference>
+      <name value="NatlDir Practitioner Endpoint Reference"/>
+      <description value="The technical details of an endpoint that can be used for electronic services"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/endpoint-usecase"/>
       </reference>
       <name value="Endpoint Usecase"/>
       <description value="EndpointUseCase is an enumeration of the specific use cases (service descriptions) supported by the endpoint"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/healthcareservice-reference"/>
+      </reference>
+      <name value="NatlDir Healthcareservice Reference"/>
+      <description value="Reference to healthcareservice resource"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/identifier-status"/>
+      </reference>
+      <name value="NatlDir Identifier Status"/>
+      <description value="Describes the status of an identifier"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -451,6 +506,17 @@
       </reference>
       <name value="Qualification"/>
       <description value="An extension to add qualifications for an organization (e.g. accreditation) or practitionerRole (e.g. registered to prescribe controlled substances)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/usage-restriction"/>
+      </reference>
+      <name value="NatlDir Usage Restriction"/>
+      <description value="The FHIR specification contains a security meta tag which can be used to inform systems of the sensitivity of resources, as well as by access control mechanisms to ensure content isn&#39;t exposed that shouldn&#39;t be.&#xA;This mechanism only goes to the resource level, this reference to a usage-restriction (consent) extends this further into the resource, and can be applied to any element, and may apply to all properties beneath the element (e.g. If applied to an identifier on a practitioner, then all the properties of the identifier should not be exposed unless it is understood)&#xA;This will be expected to be used as a modifier extension."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

@@ -12,6 +12,14 @@
       ]
     },
     {
+      "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/careteam-alias",
+      "title": "NatlDir Careteam Alias",
+      "types": [
+        "string",
+        "string"
+      ]
+    },
+    {
       "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/communication-proficiency",
       "title": "Communication Proficiency",
       "types": [
@@ -81,6 +89,14 @@
       ]
     },
     {
+      "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/contactpoint-viaintermediary",
+      "title": "NatlDir Contactpoint Viaintermediary",
+      "types": [
+        "Reference",
+        "Reference"
+      ]
+    },
+    {
       "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/delivery-method",
       "title": "Delivery Method",
       "types": [
@@ -139,6 +155,14 @@
       ]
     },
     {
+      "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/endpoint-reference",
+      "title": "NatlDir Practitioner Endpoint Reference",
+      "types": [
+        "Reference",
+        "Reference"
+      ]
+    },
+    {
       "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/endpoint-usecase",
       "title": "Endpoint Usecase",
       "types": [
@@ -194,6 +218,22 @@
         "UsageContext",
         "Dosage",
         "Meta"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/healthcareservice-reference",
+      "title": "NatlDir Healthcareservice Reference",
+      "types": [
+        "Reference",
+        "Reference"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/identifier-status",
+      "title": "NatlDir Identifier Status",
+      "types": [
+        "code",
+        "code"
       ]
     },
     {
@@ -401,6 +441,20 @@
       ]
     },
     {
+      "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/usage-restriction",
+      "title": "NatlDir Usage Restriction",
+      "types": [
+        "Reference",
+        "Reference",
+        "string",
+        "Extension",
+        "string",
+        "uri",
+        "Identifier",
+        "string"
+      ]
+    },
+    {
       "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/via-intermediary",
       "title": "Via Intermediary",
       "types": [
@@ -412,7 +466,7 @@
     "CareTeam": [
       {
         "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/NatlDir-CareTeam",
-        "title": "National Directory Exchange Care Team"
+        "title": "National Directory Care Team"
       }
     ],
     "Endpoint": [
@@ -470,13 +524,13 @@
     "Consent": [
       {
         "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/NatlDir-Restriction",
-        "title": "National Directory Restriction"
+        "title": "NatlDir Restriction"
       }
     ],
     "VerificationResult": [
       {
         "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/NatlDir-Validation",
-        "title": "National Directory Validation"
+        "title": "NatlDir Validation"
       }
     ]
   },
@@ -493,6 +547,7 @@
       "StructureDefinition.snapshot.element.constraint"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.differential.element.binding",
       "StructureDefinition.snapshot.element.binding"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding": [
@@ -540,11 +595,15 @@
     "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/accessibility": [
       "Location"
     ],
+    "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/careteam-alias": [
+      "CareTeam"
+    ],
     "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/communication-proficiency": [
       "Practitioner",
       "Practitioner.communication"
     ],
     "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/contactpoint-availabletime": [
+      "CareTeam.telecom",
       "HealthcareService.telecom",
       "Location.telecom",
       "Organization.contact.telecom",
@@ -555,10 +614,20 @@
     "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/delivery-method": [
       "HealthcareService"
     ],
+    "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/endpoint-reference": [
+      "CareTeam"
+    ],
     "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/endpoint-usecase": [
       "Endpoint"
     ],
+    "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/healthcareservice-reference": [
+      "CareTeam"
+    ],
+    "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/identifier-status": [
+      "CareTeam.identifier"
+    ],
     "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/location-reference": [
+      "CareTeam",
       "Organization"
     ],
     "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/network-reference": [
@@ -580,7 +649,11 @@
       "OrganizationAffiliation",
       "PractitionerRole"
     ],
+    "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/usage-restriction": [
+      "CareTeam"
+    ],
     "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/via-intermediary": [
+      "CareTeam.telecom",
       "HealthcareService.telecom",
       "Location.telecom",
       "Organization.contact.telecom",

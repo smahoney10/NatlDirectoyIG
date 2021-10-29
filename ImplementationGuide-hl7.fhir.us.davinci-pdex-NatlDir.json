@@ -3,14 +3,14 @@
   "id": "hl7.fhir.us.davinci-pdex-NatlDir",
   "text": {
     "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ONCFASTNationalHealthcareDirectory</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/national-healthcare-directory/ImplementationGuide/hl7.fhir.us.davinci-pdex-NatlDir</pre><div><p>National Healthcare Directory</p>\n</div></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ONCFASTNationalCareCoordinationDirectory</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/national-healthcare-directory/ImplementationGuide/hl7.fhir.us.davinci-pdex-NatlDir</pre><div><p>National Care Coordination Directory</p>\n</div></div>"
   },
   "url": "http://hl7.org/fhir/us/national-healthcare-directory/ImplementationGuide/hl7.fhir.us.davinci-pdex-NatlDir",
   "version": "1.0.0",
-  "name": "ONCFASTNationalHealthcareDirectory",
-  "title": "National Healthcare Directory",
+  "name": "ONCFASTNationalCareCoordinationDirectory",
+  "title": "National Care Coordination Directory",
   "status": "active",
-  "date": "2021-10-21T11:12:19-04:00",
+  "date": "2021-10-29T10:58:57-04:00",
   "publisher": "HL7 Patient Administration Working Group",
   "contact": [
     {
@@ -27,7 +27,7 @@
       ]
     }
   ],
-  "description": "National Healthcare Directory",
+  "description": "National Care Coordination Directory",
   "jurisdiction": [
     {
       "coding": [
@@ -325,8 +325,8 @@
         "reference": {
           "reference": "StructureDefinition/NatlDir-CareTeam"
         },
-        "name": "National Directory Exchange Care Team",
-        "description": "This profile sets minimum expectations for searching for and fetching information associated with a care team. It identifies which core elements, extensions, vocabularies and value sets SHALL be present in the CareTeam resource when using this profile.",
+        "name": "National Directory Care Team",
+        "description": "Defines the basic constraints and extensions on the CareTeam resource for use in a Validated Healthcare Directory",
         "exampleBoolean": false
       },
       {
@@ -465,8 +465,8 @@
         "reference": {
           "reference": "StructureDefinition/NatlDir-Restriction"
         },
-        "name": "National Directory Restriction",
-        "description": "This profile sets minimum expectations for searching for and fetching information associated with a restriction. It identifies which core elements, extensions, vocabularies and value sets SHALL be present in the Consent resource when using this profile.",
+        "name": "NatlDir Restriction",
+        "description": "Restriction on use/release of exchanged information",
         "exampleBoolean": false
       },
       {
@@ -479,8 +479,8 @@
         "reference": {
           "reference": "StructureDefinition/NatlDir-Validation"
         },
-        "name": "National Directory Validation",
-        "description": "This profile sets minimum expectations for searching for and fetching information associated with validation. It identifies which core elements, extensions, vocabularies and value sets SHALL be present in the VerificationResult resource when using this profile.",
+        "name": "NatlDir Validation",
+        "description": "Describes validation requirements, source(s), status and dates for one or more elements",
         "exampleBoolean": false
       },
       {
@@ -495,6 +495,20 @@
         },
         "name": "Accessibility",
         "description": "An extension to describe accessibility options offered by a practitioner or at a location.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/careteam-alias"
+        },
+        "name": "NatlDir Careteam Alias",
+        "description": "Alternate names by which the team is known",
         "exampleBoolean": false
       },
       {
@@ -533,6 +547,20 @@
           }
         ],
         "reference": {
+          "reference": "StructureDefinition/contactpoint-viaintermediary"
+        },
+        "name": "NatlDir Contactpoint Viaintermediary",
+        "description": "Represents an external point of contact responsible for handling communications with this entity",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
           "reference": "StructureDefinition/delivery-method"
         },
         "name": "Delivery Method",
@@ -547,10 +575,52 @@
           }
         ],
         "reference": {
+          "reference": "StructureDefinition/endpoint-reference"
+        },
+        "name": "NatlDir Practitioner Endpoint Reference",
+        "description": "The technical details of an endpoint that can be used for electronic services",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
           "reference": "StructureDefinition/endpoint-usecase"
         },
         "name": "Endpoint Usecase",
         "description": "EndpointUseCase is an enumeration of the specific use cases (service descriptions) supported by the endpoint",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/healthcareservice-reference"
+        },
+        "name": "NatlDir Healthcareservice Reference",
+        "description": "Reference to healthcareservice resource",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/identifier-status"
+        },
+        "name": "NatlDir Identifier Status",
+        "description": "Describes the status of an identifier",
         "exampleBoolean": false
       },
       {
@@ -635,6 +705,20 @@
         },
         "name": "Qualification",
         "description": "An extension to add qualifications for an organization (e.g. accreditation) or practitionerRole (e.g. registered to prescribe controlled substances).",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/usage-restriction"
+        },
+        "name": "NatlDir Usage Restriction",
+        "description": "The FHIR specification contains a security meta tag which can be used to inform systems of the sensitivity of resources, as well as by access control mechanisms to ensure content isn't exposed that shouldn't be.\nThis mechanism only goes to the resource level, this reference to a usage-restriction (consent) extends this further into the resource, and can be applied to any element, and may apply to all properties beneath the element (e.g. If applied to an identifier on a practitioner, then all the properties of the identifier should not be exposed unless it is understood)\nThis will be expected to be used as a modifier extension.",
         "exampleBoolean": false
       },
       {

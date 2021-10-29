@@ -1,9 +1,9 @@
-﻿ONCFASTNationalHealthcareDirectory : Validation Results
+﻿ONCFASTNationalCareCoordinationDirectory : Validation Results
 =========================================
 
-err = 15, warn = 26, info = 0
-IG Publisher Version: 1.1.82
-Generated Thu Oct 21 11:16:34 EDT 2021. FHIR version 4.0.1 for hl7.fhir.us.davinci-pdex-NatlDir#1.0.0 (canonical = http://hl7.org/fhir/us/national-healthcare-directory)
+err = 21, warn = 32, info = 0
+IG Publisher Version: 1.1.82 Out of date - current version is 1.1.83
+Generated Fri Oct 29 11:03:00 EDT 2021. FHIR version 4.0.1 for hl7.fhir.us.davinci-pdex-NatlDir#1.0.0 (canonical = http://hl7.org/fhir/us/national-healthcare-directory)
  Build Errors : 4 / 0 / 0
  C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\ImplementationGuide-hl7.fhir.us.davinci-pdex-NatlDir : 0 / 0 / 1
  C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\codesystem-AcceptingPatientsCS : 0 / 0 / 1
@@ -79,19 +79,25 @@ Generated Thu Oct 21 11:16:34 EDT 2021. FHIR version 4.0.1 for hl7.fhir.us.davin
  C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-NatlDir-OrganizationAffiliation : 0 / 0 / 1
  C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-NatlDir-Practitioner : 0 / 0 / 1
  C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-NatlDir-PractitionerRole : 0 / 1 / 1
- C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-NatlDir-Restriction : 1 / 1 / 1
- C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-NatlDir-Validation : 0 / 1 / 1
+ C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-NatlDir-Restriction : 3 / 1 / 1
+ C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-NatlDir-Validation : 2 / 1 / 1
  C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-accessibility : 0 / 0 / 1
+ C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-careteam-alias : 0 / 1 / 1
  C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-communication-proficiency : 0 / 0 / 1
  C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-contactpoint-availabletime : 0 / 0 / 1
+ C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-contactpoint-viaintermediary : 0 / 1 / 1
  C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-delivery-method : 0 / 0 / 1
+ C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-endpoint-reference : 0 / 1 / 1
  C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-endpoint-usecase : 0 / 0 / 1
+ C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-healthcareservice-reference : 0 / 1 / 1
+ C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-identifier-status : 2 / 1 / 1
  C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-location-reference : 0 / 0 / 1
  C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-network-reference : 0 / 0 / 1
  C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-newpatients : 0 / 0 / 1
  C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-org-description : 0 / 0 / 1
  C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-practitioner-qualification : 0 / 0 / 1
  C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-qualification : 0 / 0 / 1
+ C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-usage-restriction : 0 / 1 / 1
  C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\structuredefinition-via-intermediary : 0 / 0 / 1
  C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\valueset-AcceptingPatientsVS : 0 / 0 / 1
  C:\Users\smahoney\Documents\GitHub\NatlDirectory\fsh-generated\resources\valueset-AccessibilityVS : 0 / 0 / 1
@@ -272,20 +278,38 @@ ERROR: StructureDefinition/NatlDir-Endpoint: StructureDefinition.differential.el
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/NatlDir-PractitionerRole').baseDefinition: US FHIR Usage rules require that all profiles on PractitionerRole derive from the core US profile
 == fsh-generated\resources\StructureDefinition-NatlDir-Restriction.json ==
 ERROR: StructureDefinition/NatlDir-Restriction: StructureDefinition.snapshot.element[9].example[0].value.ofType(Identifier): if identifier.system is ''urn:ietf:rfc:3986'', then the identifier.value must be a full URI (e.g. start with a scheme)
+ERROR: StructureDefinition/NatlDir-Restriction: StructureDefinition.snapshot.element[11].binding.valueSet: Canonical URL 'http://hl7.org/fhir/uv/vhdir/ValueSet/consent' does not resolve
+ERROR: StructureDefinition/NatlDir-Restriction: StructureDefinition.differential.element[3].binding.valueSet: Canonical URL 'http://hl7.org/fhir/uv/vhdir/ValueSet/consent' does not resolve
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/NatlDir-Restriction'): The Implementation Guide contains no examples for this profile
 == fsh-generated\resources\StructureDefinition-NatlDir-Validation.json ==
+ERROR: StructureDefinition/NatlDir-Validation: StructureDefinition.snapshot.element[15].binding.valueSet: Canonical URL 'http://hl7.org/fhir/uv/vhdir/ValueSet/validationprocess' does not resolve
+ERROR: StructureDefinition/NatlDir-Validation: StructureDefinition.differential.element[7].binding.valueSet: Canonical URL 'http://hl7.org/fhir/uv/vhdir/ValueSet/validationprocess' does not resolve
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/NatlDir-Validation'): The Implementation Guide contains no examples for this profile
 == fsh-generated\resources\StructureDefinition-accessibility.json ==
+== fsh-generated\resources\StructureDefinition-careteam-alias.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/careteam-alias'): The Implementation Guide contains no examples for this extension
 == fsh-generated\resources\StructureDefinition-communication-proficiency.json ==
 == fsh-generated\resources\StructureDefinition-contactpoint-availabletime.json ==
+== fsh-generated\resources\StructureDefinition-contactpoint-viaintermediary.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/contactpoint-viaintermediary'): The Implementation Guide contains no examples for this extension
 == fsh-generated\resources\StructureDefinition-delivery-method.json ==
+== fsh-generated\resources\StructureDefinition-endpoint-reference.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/endpoint-reference'): The Implementation Guide contains no examples for this extension
 == fsh-generated\resources\StructureDefinition-endpoint-usecase.json ==
+== fsh-generated\resources\StructureDefinition-healthcareservice-reference.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/healthcareservice-reference'): The Implementation Guide contains no examples for this extension
+== fsh-generated\resources\StructureDefinition-identifier-status.json ==
+ERROR: StructureDefinition/identifier-status: StructureDefinition.snapshot.element[5].binding.valueSet: Canonical URL 'http://hl7.org/fhir/uv/vhdir/ValueSet/identifierstatus' does not resolve
+ERROR: StructureDefinition/identifier-status: StructureDefinition.differential.element[4].binding.valueSet: Canonical URL 'http://hl7.org/fhir/uv/vhdir/ValueSet/identifierstatus' does not resolve
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/identifier-status'): The Implementation Guide contains no examples for this extension
 == fsh-generated\resources\StructureDefinition-location-reference.json ==
 == fsh-generated\resources\StructureDefinition-network-reference.json ==
 == fsh-generated\resources\StructureDefinition-newpatients.json ==
 == fsh-generated\resources\StructureDefinition-org-description.json ==
 == fsh-generated\resources\StructureDefinition-practitioner-qualification.json ==
 == fsh-generated\resources\StructureDefinition-qualification.json ==
+== fsh-generated\resources\StructureDefinition-usage-restriction.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/usage-restriction'): The Implementation Guide contains no examples for this extension
 == fsh-generated\resources\StructureDefinition-via-intermediary.json ==
 == fsh-generated\resources\ValueSet-AcceptingPatientsVS.json ==
 == fsh-generated\resources\ValueSet-AccessibilityVS.json ==

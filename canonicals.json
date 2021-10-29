@@ -459,7 +459,7 @@
     "type": "ImplementationGuide",
     "url": "http://hl7.org/fhir/us/national-healthcare-directory/ImplementationGuide/hl7.fhir.us.davinci-pdex-NatlDir",
     "version": "1.0.0",
-    "name": "ONCFASTNationalHealthcareDirectory"
+    "name": "ONCFASTNationalCareCoordinationDirectory"
   },
   {
     "id": "NatlDir-CareTeam",
@@ -553,6 +553,13 @@
     "name": "Accessibility"
   },
   {
+    "id": "careteam-alias",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/careteam-alias",
+    "version": "1.0.0",
+    "name": "CareteamAlias"
+  },
+  {
     "id": "communication-proficiency",
     "type": "StructureDefinition",
     "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/communication-proficiency",
@@ -567,6 +574,13 @@
     "name": "ContactPointAvailableTime"
   },
   {
+    "id": "contactpoint-viaintermediary",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/contactpoint-viaintermediary",
+    "version": "1.0.0",
+    "name": "ContactPointViaIntermediary"
+  },
+  {
     "id": "delivery-method",
     "type": "StructureDefinition",
     "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/delivery-method",
@@ -574,11 +588,32 @@
     "name": "DeliveryMethod"
   },
   {
+    "id": "endpoint-reference",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/endpoint-reference",
+    "version": "1.0.0",
+    "name": "EndpointReference"
+  },
+  {
     "id": "endpoint-usecase",
     "type": "StructureDefinition",
     "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/endpoint-usecase",
     "version": "1.0.0",
     "name": "EndpointUsecase"
+  },
+  {
+    "id": "healthcareservice-reference",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/healthcareservice-reference",
+    "version": "1.0.0",
+    "name": "HealthcareServiceReference"
+  },
+  {
+    "id": "identifier-status",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/identifier-status",
+    "version": "1.0.0",
+    "name": "IdentifierStatus"
   },
   {
     "id": "location-reference",
@@ -621,6 +656,13 @@
     "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/qualification",
     "version": "1.0.0",
     "name": "Qualification"
+  },
+  {
+    "id": "usage-restriction",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/usage-restriction",
+    "version": "1.0.0",
+    "name": "UsageRestriction"
   },
   {
     "id": "via-intermediary",
