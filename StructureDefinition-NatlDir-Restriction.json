@@ -16,7 +16,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/NatlDir-Restriction",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "name": "NatlDirRestriction",
   "title": "NatlDir Restriction",
   "status": "active",

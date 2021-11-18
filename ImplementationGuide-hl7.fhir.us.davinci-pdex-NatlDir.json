@@ -6,11 +6,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ONCFASTNationalCareCoordinationDirectory</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/national-healthcare-directory/ImplementationGuide/hl7.fhir.us.davinci-pdex-NatlDir</pre><div><p>National Care Coordination Directory</p>\n</div></div>"
   },
   "url": "http://hl7.org/fhir/us/national-healthcare-directory/ImplementationGuide/hl7.fhir.us.davinci-pdex-NatlDir",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "name": "ONCFASTNationalCareCoordinationDirectory",
   "title": "National Care Coordination Directory",
   "status": "active",
-  "date": "2021-10-29T10:58:57-04:00",
+  "date": "2021-11-17T10:46:00-05:00",
   "publisher": "HL7 Patient Administration Working Group",
   "contact": [
     {
@@ -48,7 +48,7 @@
       "id": "hl7_fhir_us_core",
       "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
       "packageId": "hl7.fhir.us.core",
-      "version": "3.1.0"
+      "version": "4.0.0"
     }
   ],
   "definition": {
@@ -575,6 +575,20 @@
           }
         ],
         "reference": {
+          "reference": "StructureDefinition/digitalcertificate"
+        },
+        "name": "NatlDir Digitalcertificate",
+        "description": "A digital certificate, used to identify a user or group of users, or for encrypted communications",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
           "reference": "StructureDefinition/endpoint-reference"
         },
         "name": "NatlDir Practitioner Endpoint Reference",
@@ -631,6 +645,20 @@
           }
         ],
         "reference": {
+          "reference": "StructureDefinition/insuranceplan-reference"
+        },
+        "name": "NatlDir Insurance Plan Reference",
+        "description": "A reference to the insurancePlan resource",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
           "reference": "StructureDefinition/location-reference"
         },
         "name": "Location Reference",
@@ -659,10 +687,52 @@
           }
         ],
         "reference": {
+          "reference": "StructureDefinition/newpatientprofile"
+        },
+        "name": "NatlDir New Patient Profile",
+        "description": "Additional information about new patients a practitioner/service/location accepts (e.g. only children)",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
           "reference": "StructureDefinition/newpatients"
         },
         "name": "New Patients",
         "description": "New Patients indicates whether new patients are being accepted in general, or from a specific network.   \r\n              This extension is included in the PractitionerRole, HealthcareService, and Location profiles.  \r\n              This provides needed flexibility for specifying whether a provider accepts new patients by location and network.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/org-alias-period"
+        },
+        "name": "NatlDir Org Alias Period",
+        "description": "the period of time the alias was actively used",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/org-alias-type"
+        },
+        "name": "NatlDir Org Alias Type",
+        "description": "Type of alias (legal alternative | historical)",
         "exampleBoolean": false
       },
       {
@@ -2691,11 +2761,6 @@
         {
           "nameUrl": "implementation.html",
           "title": "Implementation",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "profiles.html",
-          "title": "Profiles",
           "generation": "markdown"
         }
       ]

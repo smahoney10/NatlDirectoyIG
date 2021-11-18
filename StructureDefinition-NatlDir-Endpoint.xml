@@ -27,11 +27,11 @@
     <valueCode value="business"/>
   </extension>
   <url value="http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/NatlDir-Endpoint"/>
-  <version value="1.0.0"/>
+  <version value="0.0.1"/>
   <name value="NatlDirEndpoint"/>
   <title value="National Directory Exchange Endpoint"/>
   <status value="active"/>
-  <date value="2021-10-29T10:58:57-04:00"/>
+  <date value="2021-11-17T10:46:00-05:00"/>
   <publisher value="HL7 Patient Administration Working Group"/>
   <contact>
     <name value="HL7 Patient Administration Working Group"/>

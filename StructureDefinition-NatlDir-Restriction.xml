@@ -41,7 +41,7 @@
     <valueCode value="patient"/>
   </extension>
   <url value="http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/NatlDir-Restriction"/>
-  <version value="1.0.0"/>
+  <version value="0.0.1"/>
   <name value="NatlDirRestriction"/>
   <title value="NatlDir Restriction"/>
   <status value="active"/>

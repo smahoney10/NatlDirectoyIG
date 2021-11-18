@@ -45,7 +45,7 @@
     <valueCode value="business"/>
   </extension>
   <url value="http://hl7.org/fhir/us/national-healthcare-directory/StructureDefinition/NatlDir-Validation"/>
-  <version value="1.0.0"/>
+  <version value="0.0.1"/>
   <name value="NatlDirValidation"/>
   <title value="NatlDir Validation"/>
   <status value="active"/>

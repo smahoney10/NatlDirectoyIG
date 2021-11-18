@@ -493,7 +493,7 @@
 						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?_lastUpdated=[_lastUpdated]</code></td></tr></tbody></table><hr/><br/></div>
   </text>
   <url value="http://hl7.org/fhir/us/davinci-pdex-NatlDir/CapabilityStatement/NatlDir"/>
-  <version value="1.0.0"/>
+  <version value="0.0.1"/>
   <name value="DavinciPdexNatlDirCapabilityStatement"/>
   <title value="NatlDir CapabilityStatement"/>
   <status value="active"/>

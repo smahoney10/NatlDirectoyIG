@@ -6,11 +6,11 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <a href="CodeSystem-QualificationStatusCS.html"><code>http://hl7.org/fhir/us/national-healthcare-directory/CodeSystem/QualificationStatusCS</code></a></li></ul></div>
   </text>
   <url value="http://hl7.org/fhir/us/national-healthcare-directory/ValueSet/QualificationStatusVS"/>
-  <version value="1.0.0"/>
+  <version value="0.0.1"/>
   <name value="QualificationStatusVS"/>
   <title value="Qualification Status"/>
   <status value="active"/>
-  <date value="2021-10-29T10:58:57-04:00"/>
+  <date value="2021-11-17T10:46:00-05:00"/>
   <publisher value="HL7 Patient Administration Working Group"/>
   <contact>
     <name value="HL7 Patient Administration Working Group"/>
